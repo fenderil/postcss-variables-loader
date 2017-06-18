@@ -9,23 +9,7 @@ const isDev = () => process.env.NODE_ENV === 'development'
 const isProd = () => !isDev()
 
 const toProdExport = (code) => `export default ${code}`
-const toDevExport = (code) => `let config = ${code};
-if (typeof Proxy !== 'undefined') {
-    config = new Proxy(config, {
-        get(target, key) {
-            if (key !== '__esModule' && !target[key]) {
-                console.error(\`No variable found, check variable key: ["\${key.toString()}"]\`);
-            }
-    
-            return target[key];
-        },
-        
-        set(target, key) {
-            throw new Error('Config variables are immutable ' + key);
-        }
-    });
-}
-export default config`
+const toDevExport = (code) => `export default ${code}`
 const toES5Export = (code) => `module.exports = ${code}`
 
 const toExport = cond([
