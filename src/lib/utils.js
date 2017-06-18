@@ -3,6 +3,7 @@ import cond from 'lodash/fp/cond'
 import postcss from 'postcss'
 import cssnext from 'postcss-cssnext'
 import atImport from 'postcss-import'
+import camelCase from 'lodash/fp/camelCase'
 
 const isDev = () => process.env.NODE_ENV === 'development'
 const isProd = () => !isDev()
@@ -49,7 +50,7 @@ const objectify = (root, filepath) => {
       const { value } = rule
       const key = rule.prop.replace(/^-+/, '') // replace "--"
 
-      result[key] = value.endsWith('px') ? parseInt(value, 10) : value
+      result[camelCase(key)] = /* value.endsWith('px') ? parseInt(value, 10) : */ value
     }
   })
   return result

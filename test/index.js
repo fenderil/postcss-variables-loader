@@ -16,7 +16,7 @@ test('works with es5 option', async (t) => {
 
 test('px strip', async (t) => {
   const result = await runner('./pxstrip.css')
-  const expected = 10
+  const expected = '10px 10px'
 
   t.is(result.size, expected)
 })
