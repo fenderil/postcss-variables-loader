@@ -20,6 +20,10 @@
     "type": "git",
     "url": "https://github.com/sbtsbol/postcss-variables-loader-sbtsbol"
   },
+  "publishConfig": {
+    "registry": "http://nexus.sigma.sbrf.ru:8099/nexus/content/repositories/sbol_npm_release/",
+    "always-auth": true
+  },
   "scripts": {
     "audit": "nsp check package",
     "build": "babel -d ./ ./src",
