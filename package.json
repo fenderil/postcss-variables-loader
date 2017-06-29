@@ -1,5 +1,5 @@
 {
-  "version": "2.2.0",
+  "version": "2.2.1",
   "name": "postcss-variables-loader-sbtsbol",
   "description": "Share variables between CSS and JS with Webpack + HMR",
   "main": "lib/index.js",
