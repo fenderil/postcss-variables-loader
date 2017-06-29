@@ -36,6 +36,9 @@
     "email": "coobaha@gmail.com",
     "url": "https://github.com/coobaha"
   },
+  "contributors": [
+    "Tupitckiy Ilya <INTupitckiy.SBT@sberbank.ru>"
+  ],
   "pre-commit": [
     "validate"
   ],
